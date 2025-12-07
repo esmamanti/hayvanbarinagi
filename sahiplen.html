@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Köpeklerimiz - TinTin Barınağı</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+      .dog-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+      }
+      
+      .dog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .dog-card-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      
+      .dog-card-content {
+        padding: 20px;
+      }
+      
+      .dog-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .dog-info {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+      
+      .dog-info strong {
+        color: #333;
+      }
+      
+      .adopt-btn {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        margin-top: 15px;
+      }
+      
+      .adopt-btn:hover {
+        background-color: #28a745;
+        text-decoration: none;
+        color: white;
+      }
+      
+      .adopt-form {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+      }
+      
+      .adopt-form.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .form-content {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+      
+      .form-close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        border: none;
+        background: none;
+        padding: 0;
+      }
+      
+      .form-close:hover {
+        color: #000;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+      
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #FF6B6B;
+        box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+      }
+      
+      .submit-btn {
+        background-color: #FF6B6B;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 16px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+      
+      .submit-btn:hover {
+        background-color: #FF5252;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .section-title h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      
+      .section-title p {
+        font-size: 18px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+
+      <head>
+    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +9055 555 55 55</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> kou@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+					<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>TinTin Barınağı</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="index.html" class="nav-link">Anasayfa</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">Hakkımızda</a></li>
+					<li class="nav-item"><a href="tintinbarinak.html" class="nav-link">Barınak</a></li>
+					<li class="nav-item dropdown active">
+						<a href="sahiplen.html" 
+							class="nav-link dropdown-toggle"
+							id="adoptDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							SAHİPLEN
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="adoptDropdown">
+							<a class="dropdown-item" href="adopt-cats.html">Kedilerimiz</a>
+							<a class="dropdown-item" href="adopt-dogs.html">Köpeklerimiz</a>
+						</div>
+						</li>
+
+
+						<li class="nav-item dropdown">
+						<a href="#" 
+							class="nav-link dropdown-toggle"
+							id="volunteerDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Gönüllülük
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="volunteerDropdown">
+							<a class="dropdown-item" href="volunteer-feeding.html">Besleme Ekibi</a>
+							<a class="dropdown-item" href="volunteer-care.html">Bakım & Temizlik Ekibi</a>
+							<a class="dropdown-item" href="volunteer-vet.html">Veteriner Destek Ekibi</a>
+						</div>
+						</li>
+
+
+					<li class="nav-item"><a href="bagis.html" class="nav-link">Bağış</a></li>
+
+					<li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+					<li class="nav-item"><a href="#" id="cartButton" class="nav-link nav-icon" onclick="showCartModal(); return false;"><span class="fa fa-shopping-cart"></span><span class="nav-badge" id="cartCount">0</span></a></li>
+					<li class="nav-item"><a href="#" id="userButton" class="nav-link nav-icon" onclick="openLoginModal(); return false;"><span class="fa fa-user"></span></a></li>
+								</ul>
+				</div>
+			</div>
+		</nav>
+
+	<!-- Cart Modal -->
+	<div class="adopt-form" id="cartModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeCartModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+			<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+				<thead>
+					<tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+				</thead>
+				<tbody id="cartItems"></tbody>
+			</table>
+			<button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="adopt-form" id="loginModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeLoginModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email</label>
+					<input id="loginEmail" type="email" required>
+				</div>
+				<div class="form-group">
+					<label for="loginPassword">Şifre</label>
+					<input id="loginPassword" type="password" required>
+				</div>
+				<button type="submit" class="submit-btn">Giriş</button>
+			</form>
+		</div>
+	</div>
+    <section class="ftco-section ftco-no-pb ftco-no-pt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Dostlarımız</h1>
+                        <p>Barınakta yaşayan sevimli dostlarımızla tanışın</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row" id="dogs-container">
+                <!-- Köpek kartları JavaScript ile eklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sahiplen Formu Modal -->
+    <div class="adopt-form" id="adoptModal">
+        <div class="form-content">
+            <button class="form-close" onclick="closeAdoptForm()">&times;</button>
+            <h2 style="margin-bottom: 30px; text-align: center; color: #333;">Dost Ol</h2>
+            <form id="adoptFormElement">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Adresiniz *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefon Numaranız *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Adresiniz *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="occupation">Mesleğiniz</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+                
+                <div class="form-group">
+                    <label for="housing">Konut Türü (Ev/Daire/Diğer)</label>
+                    <input type="text" id="housing" name="housing">
+                </div>
+                
+                <div class="form-group">
+                    <label for="pet_experience">Pet Sahipliği Deneyimi *</label>
+                    <input type="text" id="pet_experience" name="pet_experience" placeholder="Evet/Hayır ve varsa detaylar" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="why_adopt">Neden Köpek Sahiplendiniz Görmek İstiyorsunuz? *</label>
+                    <textarea id="why_adopt" name="why_adopt" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="other_info">Diğer Bilgiler</label>
+                    <textarea id="other_info" name="other_info"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Formu Gönder</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          
+          <!-- LOGO + AÇIKLAMA -->
+          <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+            <h2 class="footer-heading">TinTin Barınağı</h2>
+            <p>
+              Can dostlarımız için güvenli bir yaşam alanı oluşturuyor,
+              sahiplendirme, gönüllülük ve bağışlarla onların hayatına dokunuyoruz.
+            </p>
+
+            <ul class="ftco-footer-social p-0">
+              <li class="ftco-animate">
+                <a href="https://x.com/?lang=tr" target="_blank" title="X">
+                  <span class="fa fa-twitter"></span>
+                </a>
+              </li>
+              <li class="ftco-animate">
+                <a href="#" target="_blank" title="Facebook">
+                  <span class="fa fa-facebook"></span>
+                </a>
+              </li>
+              <li class="ftco-animate">
+                <a href="#" target="_blank" title="Instagram">
+                  <span class="fa fa-instagram"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- HIZLI MENÜ -->
+          <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+            <h2 class="footer-heading">Hızlı Menü</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="py-2 d-block">Anasayfa</a></li>
+              <li><a href="about.html" class="py-2 d-block">Hakkımızda</a></li>
+              <li><a href="tintinbarinak.html" class="py-2 d-block">Barınak</a></li>
+              <li><a href="adopt.html" class="py-2 d-block">Sahiplen</a></li>
+              <li><a href="gonulluol.html" class="py-2 d-block">Gönüllü Ol</a></li>
+              <li><a href="pricing.html" class="py-2 d-block">Bağış</a></li>
+              <li><a href="contact.html" class="py-2 d-block">İletişim</a></li>
+            </ul>
+          </div>
+
+
+          <!-- İLETİŞİM -->
+          <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+            <h2 class="footer-heading">İletişim</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li>
+                  <span class="icon fa fa-map"></span>
+                  <span class="text">Kocaeli, Türkiye</span>
+                </li>
+
+                <li>
+                  <a href="tel:+905550000000">
+                    <span class="icon fa fa-phone"></span>
+                    <span class="text">+90 555 000 00 00</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="mailto:info@tintinbarinagi.com">
+                    <span class="icon fa fa-paper-plane"></span>
+                    <span class="text">info@tintinbarinagi.com</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- ALT BANT -->
+        
+      </div>
+    </footer>
+
+    <!-- Cart & Login modals -->
+    <div class="adopt-form" id="cartModal">
+      <div class="form-content">
+        <button class="form-close" onclick="closeCartModal()">&times;</button>
+        <h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+        <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+          <thead>
+            <tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+          </thead>
+          <tbody id="cartItems"></tbody>
+        </table>
+        <button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+      </div>
+    </div>
+
+    <div class="adopt-form" id="loginModal">
+      <div class="form-content">
+        <button class="form-close" onclick="closeLoginModal()">&times;</button>
+        <h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Şifre</label>
+            <input id="loginPassword" type="password" required>
+          </div>
+          <button type="submit" class="submit-btn">Giriş</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        const dogs = [
+            {
+                id: 1,
+                name: "Rintintin",
+                age: "3 yaş",
+                breed: "Labrador",
+                description: "Max çok sevecen ve sadık bir köpek. Dış ortamda oyunları çok seviyordur.",
+                image: "images/kopek10.webp"
+            },
+            {
+              id: 2,
+              name: "Bıcırık",
+              age: "2 ay",
+              color: "Siyah-Beyaz",
+              description: "Çok sevimli ve oyuncu bir kedi. Yeni bir eve uyum sağlamaktan heyecan duyar.",
+              image: "images/kedi1.jpg"
+            },
+            {
+                id: 3,
+                name: "Haydut",
+                age: "2 yaş",
+                breed: "Golden Retriever",
+                description: "Zeki ve eğitimi alabilecek nitelikte bir köpektir. Aile dostu ve çocuklarla iyi geçinir.",
+                image: "images/kopek11.webp"
+            },
+            {
+              id: 4,
+              name: "Mısra",
+              age: "1.5 yaş",
+              color: "Turuncu",
+              description: "Enerjik, meraklı ve hareketlidir.Yeni oyuncaklara hemen ilgi gösterir.",
+              image: "images/kedi4.webp"
+            },
+            {
+                id: 5,
+                name: "Pino",
+                age: "4 yaş",
+                breed: "Beagle",
+                description: "Charlie çok hoşlantılı ve meraklı bir köpek. Yürüyüşleri çok seviyor.",
+                image: "images/kopek12.jpg"
+            },
+            {
+              id: 6,
+              name: "Tarçın",
+              age: "3 yaş",
+              color: "Tekir",
+              description: "Sevecen ve dikkat çekmeyi sever. Oturduğu yerde uzun uzun mırıldanabilir.",
+              image: "images/kedi5.jpg"
+            },
+            {
+                id: 7,
+                name: "Panço",
+                age: "1.5 yaş",
+                breed: "Mixed",
+                description: "Bella küçük fakat cesaretli bir köpek. Oyun oynamayı ve sosyalleşmeyi çok seviyor.",
+                image: "images/kopek13.webp"
+            },
+            {
+              id: 8,
+              name: "Mia",
+              age: "3 yaş",
+              color: "Tekir-Beyaz",
+              description: "Sakin ve ev ortamına çok uygundur.Huzurlu köşelerde vakit geçirmeyi sever.",
+              image: "images/kedi6.webp"
+            },
+            {
+                id: 9,
+                name: "Moka",
+                age: "3 yaş",
+                breed: "Labrador",
+                description: "Max çok sevecen ve sadık bir köpek. Dış ortamda oyunları çok seviyordur.",
+                image: "images/kopek14.webp"
+            },
+            {
+              id: 10,
+              name: "Nohut",
+              age: "3 yaş",
+              color: "Beyaz",
+              description: "Ailesiyle zaman geçirmeyi çok sever. Ev ortamına çok uygundur.Oyun sever. ",
+              image: "images/kedi7.webp"
+            },
+            {
+                id: 11,
+                name: "Şukufe",
+                age: "4 aylık",
+                breed: "Golden Retriever",
+                description: " Şukufe eğitim alabilecek nitelikte bir köpektir. Aile dostu ve çocuklarla iyi geçinir.",
+                image: "images/kopek15.webp"
+            },
+            {
+              id: 12,
+              name: "Benek",
+              age: "4–5 ay",
+              color: "Gri",
+              description: "Her şeyi keşfetmeye meraklı. Diğer hayvanlarla iyi anlaşır.Yavru enerjisi yüksek.",
+              image: "images/kedi8.webp"
+            },
+            {
+                id: 13,
+                name: "Bakır",
+                age: "4 yaş",
+                breed: "Beagle",
+                description: "Charlie çok hoşlantılı ve meraklı bir köpek. Yürüyüşleri çok seviyor.",
+                image: "images/kopek16.jpg"
+            },
+            {
+                id: 14,
+                name: "Bonibon",
+                age: "1.5 yaş",
+                breed: "Mixed",
+                description: "Bella küçük fakat cesaretli bir köpek. Oyun oynamayı ve sosyalleşmeyi çok seviyor.",
+                image: "images/kopek17.jpg"
+            }
+        ];
+
+        function loadDogs() {
+            const container = document.getElementById('dogs-container');
+            container.innerHTML = '';
+            
+            dogs.forEach(dog => {
+                const cardHtml = `
+                    <div class="col-md-6 col-lg-3">
+                        <div class="dog-card">
+                            <img src="${dog.image}" alt="${dog.name}" class="dog-card-image">
+                            <div class="dog-card-content">
+                                <div class="dog-name">${dog.name}</div>
+                                <div class="dog-info">
+                                    <strong>Yaş:</strong> ${dog.age}<br>
+                                    <strong>Irk:</strong> ${dog.breed}
+                                </div>
+                                <div class="dog-info">${dog.description}</div>
+                                <button class="adopt-btn" onclick="openAdoptForm()">Dost Ol</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        function openAdoptForm() {
+            document.getElementById('adoptModal').classList.add('show');
+        }
+
+        function closeAdoptForm() {
+            document.getElementById('adoptModal').classList.remove('show');
+        }
+
+        // Modal dışına tıklandığında kapat
+        window.onclick = function(event) {
+            const modal = document.getElementById('adoptModal');
+            if (event.target == modal) {
+                modal.classList.remove('show');
+            }
+        }
+
+        // Form gönderimi
+        document.getElementById('adoptFormElement').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                occupation: document.getElementById('occupation').value,
+                housing: document.getElementById('housing').value,
+                pet_experience: document.getElementById('pet_experience').value,
+                why_adopt: document.getElementById('why_adopt').value,
+                other_info: document.getElementById('other_info').value
+            };
+            
+            console.log('Form Data:', formData);
+            alert('Formu gönderdiğiniz için teşekkür ederiz! Kısa sürede sizinle iletişime geçeceğiz.');
+            
+            // Formu sıfırla
+            this.reset();
+            
+            // Modalı kapat
+            closeAdoptForm();
+        });
+
+        // Sayfa yüklüdüğünde köpekleri göster
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDogs();
+        });
+    </script>
+        <script src="js/data.js"></script>
+
+      <div id="animalArea"></div>
+
+      <script>
+      const list = loadAnimals();
+
+      const isCats = location.pathname.includes("cats");
+      const isDogs = location.pathname.includes("dogs");
+
+      list.forEach(a => {
+
+        if (
+          (isCats && a.type === "Kedi") ||
+          (isDogs && a.type === "Köpek") ||
+          (!isCats && !isDogs)
+        ) {
+
+          animalArea.innerHTML += `
+          <div class="animal-card">
+            <img src="${a.image}">
+            <h4>${a.name}</h4>
+            <p>${a.breed}</p>
+            <span>${a.age}</span>
+          </div>
+          `;
+        }
+
+      });
+    </script>
+  </body>
+</html>

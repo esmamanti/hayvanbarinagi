@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +9055 555 55 55</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> kou@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+					<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>TinTin Barınağı</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="index.html" class="nav-link">ANASAYFA</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">HAKKIMIZDA</a></li>
+					<li class="nav-item"><a href="tintinbarinak.html" class="nav-link">BARINAK</a></li>
+					<li class="nav-item dropdown">
+						<a href="sahiplen.html" 
+							class="nav-link dropdown-toggle"
+							id="adoptDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							SAHİPLEN
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="adoptDropdown">
+							<a class="dropdown-item" href="adopt-cats.html">Kedilerimiz</a>
+							<a class="dropdown-item" href="adopt-dogs.html">Köpeklerimiz</a>
+						</div>
+						</li>
+
+
+						<li class="nav-item dropdown">
+						<a href="#" 
+							class="nav-link dropdown-toggle"
+							id="volunteerDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Gönüllülük
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="volunteerDropdown">
+							<a class="dropdown-item" href="volunteer-feeding.html">Besleme Ekibi</a>
+							<a class="dropdown-item" href="volunteer-care.html">Bakım & Temizlik Ekibi</a>
+							<a class="dropdown-item" href="volunteer-vet.html">Veteriner Destek Ekibi</a>
+						</div>
+						</li>
+
+
+					<li class="nav-item"><a href="bagis.html" class="nav-link">Bağış</a></li>
+
+					<li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+					<li class="nav-item"><a href="#" id="cartButton" class="nav-link nav-icon" onclick="showCartModal(); return false;"><span class="fa fa-shopping-cart"></span><span class="nav-badge" id="cartCount">0</span></a></li>
+					<li class="nav-item"><a href="#" id="userButton" class="nav-link nav-icon" onclick="openLoginModal(); return false;"><span class="fa fa-user"></span></a></li>
+								</ul>
+				</div>
+			</div>
+		</nav>
+
+	<!-- Cart Modal -->
+	<div class="adopt-form" id="cartModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeCartModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+			<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+				<thead>
+					<tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+				</thead>
+				<tbody id="cartItems"></tbody>
+			</table>
+			<button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="adopt-form" id="loginModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeLoginModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email</label>
+					<input id="loginEmail" type="email" required>
+				</div>
+				<div class="form-group">
+					<label for="loginPassword">Şifre</label>
+					<input id="loginPassword" type="password" required>
+				</div>
+				<button type="submit" class="submit-btn">Giriş</button>
+			</form>
+		</div>
+	</div>
+
+<!-- BAŞLIK -->
+<section class="ftco-section pt-4 pb-4">
+<div class="container text-center">
+<h1>Tüm Duyurular</h1>
+<p>TinTin Barınağı hakkındaki duyurular en yeni tarihten başlayarak listelenmektedir.</p>
+</div>
+</section>
+
+<!-- DUYURU LİSTESİ -->
+
+<section class="ftco-section pt-0">
+<div class="container">
+
+<!-- NEWS ITEM 1 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news1">🐾 Barınağımıza Yeni Can Dostlarımız Katıldı</a></h4>
+<small>04 Aralık 2025</small>
+<p>Son iki hafta içerisinde barınağımıza 7 yeni patili dostumuz kabul edilmiş, sağlık kontrolleri
+tamamlandıktan sonra karantinaya alınmıştır...</p>
+</div>
+</div>
+
+<!-- NEWS ITEM 2 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news2">🐶 Sahiplendirme Günüyle 3 Can Dost Yuvasına Kavuştu</a></h4>
+<small>03 Aralık 2025</small>
+<p>Hafta sonu düzenlediğimiz sahiplendirme etkinliği sayesinde 3 can dostumuz kalıcı ailelerine
+kavuşmanın mutluluğunu yaşadı...</p>
+</div>
+</div>
+
+<!-- NEWS ITEM 3 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news3">❤️ Gönüllülerimiz Barınağımızı Ziyaret Etti</a></h4>
+<small>02 Aralık 2025</small>
+<p>Üniversite kulüplerinden oluşan gönüllü gruplar barınağımızı ziyaret ederek dostlarımızla vakit geçirdi...</p>
+</div>
+</div>
+
+<!-- NEWS ITEM 4 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news4">🔍 Kayıp “Boncuk” Bulundu</a></h4>
+<small>28 Kasım 2025</small>
+<p>Sosyal medya üzerinden yapılan paylaşımlar sonucunda Boncuk
+isimli dostumuz bulunarak ailesine teslim edildi...</p>
+</div>
+</div>
+
+<!-- NEWS ITEM 5 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news5">🎁 Yeni Yıla Özel Bağış Gecesi Hazırlıkları Başladı</a></h4>
+<small>20 Kasım 2025</small>
+<p>31 Aralık gecesi düzenleyeceğimiz bağış organizasyonunun hazırlıkları
+hızla devam ediyor...</p>
+</div>
+</div>
+
+<!-- NEWS ITEM 6 -->
+<div class="card announcement-card mb-4">
+<div class="card-body">
+<h4><a href="#" data-toggle="modal" data-target="#news6">🥫 Kış Aylarına Özel Mama Kampanyası Başlatıldı</a></h4>
+<small>15 Kasım 2025</small>
+<p>Soğuk havaların yaklaşması ile birlikte mama stoğumuzun güçlendirilmesi için kampanya
+başlatıldı...</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- =================== -->
+<!-- ====== MODALS ===== -->
+<!-- =================== -->
+
+<div class="modal fade" id="news1"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>🐾 Barınağımıza Yeni Can Dostlarımız Katıldı</h4></div>
+<div class="modal-body">
+<p>Son iki hafta içerisinde toplam 7 yeni dostumuz barınağımıza kabul edildi.
+Veteriner kontrolleri yapılan dostlarımız sağlık taramasından geçirilerek karantinaya alındı.
+Tüm süreçler tamamlandıktan sonra sahiplendirme programımıza dahil edileceklerdir.</p>
+</div></div></div></div>
+
+<div class="modal fade" id="news2"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>🐶 Sahiplendirme Günüyle 3 Can Dost Yuvasına Kavuştu</h4></div>
+<div class="modal-body">
+<p>Hafta sonu gerçekleştirilen sahiplendirme etkinliğimizde 3 can dostumuz yeni ailelerinin yanına uğurlandı.
+Tüm sahiplendirmeler sözleşmeli olarak yapılmış ve kontrolleri devam etmektedir.</p>
+</div></div></div></div>
+
+<div class="modal fade" id="news3"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>❤️ Gönüllülerimiz Barınağımızı Ziyaret Etti</h4></div>
+<div class="modal-body">
+<p>Üniversite öğrencilerinden oluşan gönüllüler barınağımıza ziyaret düzenleyerek temizlik,
+mama dağıtımı ve sosyal aktivitelerde gönüllü olarak görev aldı.</p>
+</div></div></div></div>
+
+<div class="modal fade" id="news4"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>🔍 Kayıp “Boncuk” Bulundu</h4></div>
+<div class="modal-body">
+<p>Sosyal medya paylaşımları sayesinde kayıp ilanı verilen Boncuk bulunarak sağlıklı şekilde ailesine teslim edilmiştir.</p>
+</div></div></div></div>
+
+<div class="modal fade" id="news5"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>🎁 Yeni Yıla Özel Bağış Gecesi</h4></div>
+<div class="modal-body">
+<p>31 Aralık gecesi gerçekleşecek organizasyon için sahne gösterileri, bağış satış stantları
+ve hediye çekilişleri planlanmaktadır.</p>
+</div></div></div></div>
+
+<div class="modal fade" id="news6"><div class="modal-dialog modal-lg"><div class="modal-content">
+<div class="modal-header"><h4>🥫 Mama Kampanyası Başlatıldı</h4></div>
+<div class="modal-body">
+<p>Kış boyunca oluşabilecek mama ihtiyacını karşılamak adına sürekli bağış toplama kampanyamız başlatılmıştır.</p>
+</div></div></div></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- LOGO + AÇIKLAMA -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">TinTin Barınağı</h2>
+        <p>
+          Can dostlarımız için güvenli bir yaşam alanı oluşturuyor,
+          sahiplendirme, gönüllülük ve bağışlarla onların hayatına dokunuyoruz.
+        </p>
+
+        <ul class="ftco-footer-social p-0">
+          <li class="ftco-animate">
+            <a href="https://x.com/?lang=tr" target="_blank" title="X">
+              <span class="fa fa-twitter"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Facebook">
+              <span class="fa fa-facebook"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Instagram">
+              <span class="fa fa-instagram"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- HIZLI MENÜ -->
+      <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+        <h2 class="footer-heading">Hızlı Menü</h2>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="py-2 d-block">Anasayfa</a></li>
+          <li><a href="about.html" class="py-2 d-block">Hakkımızda</a></li>
+          <li><a href="tintinbarinak.html" class="py-2 d-block">Barınak</a></li>
+          <li><a href="adopt.html" class="py-2 d-block">Sahiplen</a></li>
+          <li><a href="gonulluol.html" class="py-2 d-block">Gönüllü Ol</a></li>
+          <li><a href="pricing.html" class="py-2 d-block">Bağış</a></li>
+          <li><a href="contact.html" class="py-2 d-block">İletişim</a></li>
+        </ul>
+      </div>
+
+
+      <!-- İLETİŞİM -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">İletişim</h2>
+        <div class="block-23 mb-3">
+          <ul>
+            <li>
+              <span class="icon fa fa-map"></span>
+              <span class="text">Kocaeli, Türkiye</span>
+            </li>
+
+            <li>
+              <a href="tel:+905550000000">
+                <span class="icon fa fa-phone"></span>
+                <span class="text">+90 555 000 00 00</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:info@tintinbarinagi.com">
+                <span class="icon fa fa-paper-plane"></span>
+                <span class="text">info@tintinbarinagi.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/data.js"></script>
+
+<div id="annArea"></div>
+
+<script>
+loadAnnouncements().forEach(d => {
+
+ annArea.innerHTML += `
+   <div class="announcement">
+      <h3>${d.title}</h3>
+      <p>${d.summary}</p>
+      <small>${d.date}</small>
+   </div>
+ `
+
+})
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TinTin Barınağı | Gönüllü Ol</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+.service-card {
+  transition: all .25s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+ <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +9055 555 55 55</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> kou@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+					<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>TinTin Barınağı</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="index.html" class="nav-link">ANASAYFA</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">HAKKIMIZDA</a></li>
+					<li class="nav-item"><a href="tintinbarinak.html" class="nav-link">BARINAK</a></li>
+					<li class="nav-item dropdown">
+						<a href="sahiplen.html" 
+							class="nav-link dropdown-toggle"
+							id="adoptDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							SAHİPLEN
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="adoptDropdown">
+							<a class="dropdown-item" href="adopt-cats.html">Kedilerimiz</a>
+							<a class="dropdown-item" href="adopt-dogs.html">Köpeklerimiz</a>
+						</div>
+						</li>
+
+
+						<li class="nav-item dropdown active">
+						<a href="gonulluol.html" 
+							class="nav-link dropdown-toggle"
+							id="volunteerDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							GÖNÜLLÜLÜK
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="volunteerDropdown">
+							<a class="dropdown-item" href="volunteer-feeding.html">Besleme Ekibi</a>
+							<a class="dropdown-item" href="volunteer-care.html">Bakım & Temizlik Ekibi</a>
+							<a class="dropdown-item" href="volunteer-vet.html">Veteriner Destek Ekibi</a>
+						</div>
+						</li>
+
+
+					<li class="nav-item"><a href="bagis.html" class="nav-link">BAĞIŞ</a></li>
+
+					<li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+					<li class="nav-item"><a href="#" id="cartButton" class="nav-link nav-icon" onclick="showCartModal(); return false;"><span class="fa fa-shopping-cart"></span><span class="nav-badge" id="cartCount">0</span></a></li>
+					<li class="nav-item"><a href="#" id="userButton" class="nav-link nav-icon" onclick="openLoginModal(); return false;"><span class="fa fa-user"></span></a></li>
+								</ul>
+				</div>
+			</div>
+		</nav>
+
+	<!-- Cart Modal -->
+	<div class="adopt-form" id="cartModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeCartModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+			<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+				<thead>
+					<tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+				</thead>
+				<tbody id="cartItems"></tbody>
+			</table>
+			<button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="adopt-form" id="loginModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeLoginModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email</label>
+					<input id="loginEmail" type="email" required>
+				</div>
+				<div class="form-group">
+					<label for="loginPassword">Şifre</label>
+					<input id="loginPassword" type="password" required>
+				</div>
+				<button type="submit" class="submit-btn">Giriş</button>
+			</form>
+		</div>
+	</div>
+
+
+<!-- GÖNÜLLÜ EKİPLER KARTLARI -->
+<section class="ftco-section bg-light volunteer-section">
+  <div class="container">
+
+    <!-- BAŞLIK -->
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 text-center">
+        <h2>Gönüllü Ekiplerimiz</h2>
+        <p>
+          Barınağımızda gönüllülerimiz farklı alanlarda görev alarak can dostlarımız için çalışmaktadır.
+          İlgi alanına uygun ekibi seçerek sen de bize katılabilirsin.
+        </p>
+      </div>
+    </div>
+
+    <!-- KARTLAR -->
+    <div class="row justify-content-center text-center">
+
+      <div class="col-md-4 col-sm-10 mb-4">
+        <a href="volunteer-feeding.html">
+          <div class="service-card p-4 bg-white rounded">
+            <i class="fi fi-rr-bowl-rice" style="font-size:48px;color:#28a745;"></i>
+            <h4 class="mt-3">Besleme Ekibi</h4>
+            <p>Mama ve su dağıtımı yaparak beslenmeyi sağlar.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-10 mb-4">
+        <a href="volunteer-care.html">
+          <div class="service-card p-4 bg-white rounded">
+            <i class="fi fi-rr-broom" style="font-size:48px;color:#28a745;"></i>
+            <h4 class="mt-3">Bakım & Temizlik</h4>
+            <p>Barınak alanlarının hijyeninden sorumludur.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-10 mb-4">
+        <a href="volunteer-vet.html">
+          <div class="service-card p-4 bg-white rounded">
+            <i class="fi fi-rr-heart-health-muscle" style="font-size:48px;color:#28a745;"></i>
+            <h4 class="mt-3">Veteriner Destek</h4>
+            <p>Tedavi ve kontrollerde veterinerlere yardımcı olur.</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- LOGO + AÇIKLAMA -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">TinTin Barınağı</h2>
+        <p>
+          Can dostlarımız için güvenli bir yaşam alanı oluşturuyor,
+          sahiplendirme, gönüllülük ve bağışlarla onların hayatına dokunuyoruz.
+        </p>
+
+        <ul class="ftco-footer-social p-0">
+          <li class="ftco-animate">
+            <a href="https://x.com/?lang=tr" target="_blank" title="X">
+              <span class="fa fa-twitter"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Facebook">
+              <span class="fa fa-facebook"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Instagram">
+              <span class="fa fa-instagram"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- HIZLI MENÜ -->
+      <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+        <h2 class="footer-heading">Hızlı Menü</h2>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="py-2 d-block">Anasayfa</a></li>
+          <li><a href="about.html" class="py-2 d-block">Hakkımızda</a></li>
+          <li><a href="tintinbarinak.html" class="py-2 d-block">Barınak</a></li>
+          <li><a href="adopt.html" class="py-2 d-block">Sahiplen</a></li>
+          <li><a href="gonulluol.html" class="py-2 d-block">Gönüllü Ol</a></li>
+          <li><a href="pricing.html" class="py-2 d-block">Bağış</a></li>
+          <li><a href="contact.html" class="py-2 d-block">İletişim</a></li>
+        </ul>
+      </div>
+
+
+      <!-- İLETİŞİM -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">İletişim</h2>
+        <div class="block-23 mb-3">
+          <ul>
+            <li>
+              <span class="icon fa fa-map"></span>
+              <span class="text">Kocaeli, Türkiye</span>
+            </li>
+
+            <li>
+              <a href="tel:+905550000000">
+                <span class="icon fa fa-phone"></span>
+                <span class="text">+90 555 000 00 00</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:info@tintinbarinagi.com">
+                <span class="icon fa fa-paper-plane"></span>
+                <span class="text">info@tintinbarinagi.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </div>
+</footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

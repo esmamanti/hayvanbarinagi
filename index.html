@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +9055 555 55 55</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> kou@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+					<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>TinTin Barınağı</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a href="index.html" class="nav-link">Anasayfa</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">Hakkımızda</a></li>
+					<li class="nav-item"><a href="tintinbarinak.html" class="nav-link">Barınak</a></li>
+					<li class="nav-item dropdown">
+						<a href="sahiplen.html" 
+							class="nav-link dropdown-toggle"
+							id="adoptDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							SAHİPLEN
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="adoptDropdown">
+							<a class="dropdown-item" href="adopt-cats.html">Kedilerimiz</a>
+							<a class="dropdown-item" href="adopt-dogs.html">Köpeklerimiz</a>
+						</div>
+						</li>
+
+
+						<li class="nav-item dropdown">
+						<a href="#" 
+							class="nav-link dropdown-toggle"
+							id="volunteerDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Gönüllülük
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="volunteerDropdown">
+							<a class="dropdown-item" href="volunteer-feeding.html">Besleme Ekibi</a>
+							<a class="dropdown-item" href="volunteer-care.html">Bakım & Temizlik Ekibi</a>
+							<a class="dropdown-item" href="volunteer-vet.html">Veteriner Destek Ekibi</a>
+						</div>
+						</li>
+
+
+					<li class="nav-item"><a href="bagis.html" class="nav-link">Bağış</a></li>
+
+					<li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+					<li class="nav-item"><a href="#" id="cartButton" class="nav-link nav-icon" onclick="showCartModal(); return false;"><span class="fa fa-shopping-cart"></span><span class="nav-badge" id="cartCount">0</span></a></li>
+					<li class="nav-item"><a href="#" id="userButton" class="nav-link nav-icon" onclick="openLoginModal(); return false;"><span class="fa fa-user"></span></a></li>
+								</ul>
+				</div>
+			</div>
+		</nav>
+
+	<!-- Cart Modal -->
+	<div class="adopt-form" id="cartModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeCartModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+			<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+				<thead>
+					<tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+				</thead>
+				<tbody id="cartItems"></tbody>
+			</table>
+			<button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="adopt-form" id="loginModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeLoginModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email</label>
+					<input id="loginEmail" type="email" required>
+				</div>
+				<div class="form-group">
+					<label for="loginPassword">Şifre</label>
+					<input id="loginPassword" type="password" required>
+				</div>
+				<button type="submit" class="submit-btn">Giriş</button>
+			</form>
+		</div>
+	</div>
+
+<div class="hero-wrap js-fullheight">
+  <div class="home-slider owl-carousel js-fullheight">
+
+			<div class="slider-item js-fullheight" style="background-image:url('images/1.jpg');">
+				<a href="bagis.html" class="slider-link"></a>
+
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+						<div class="col-md-11 ftco-animate text-center">
+							<h1 class="mb-4">Paylaş, bir patiyi sevindir.</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-item js-fullheight" style="background-image:url('images/kedikopekkapak.jpg');">
+			<a href="sahiplen.html" class="slider-link"></a>
+
+			<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+						<div class="col-md-11 ftco-animate text-center">
+							<h1 class="mb-4">Can Dostun Seni Bekliyor 🐾</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-item js-fullheight" style="background-image:url('images/gonullu.jpg');">
+			<a href="gonulluol.html" class="slider-link"></a>
+
+			<div class="overlay"></div>
+				<div class="container">
+					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+						<div class="col-md-11 ftco-animate text-center">
+							<h1 class="mb-4">Gönüllü Ol, Mucizelere Ortak Ol</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-item js-fullheight" style="background-image:url('images/ziyaret.jpeg');">
+			<a href="tintinbarinak.html" class="slider-link"></a>
+
+			<div class="overlay"></div>
+			<div class="container">
+					<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+						<div class="col-md-11 ftco-animate text-center">
+							<h1 class="mb-4">Candostlarımızı sevgisiz ve ilgisiz bırakmayın</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+		<section class="ftco-section bg-light ftco-no-pt ftco-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+						<div class="d-block services text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-veterinarian"></span>
+							</div>
+							<div class="media-body">
+							  <h3 class="heading">🩺 7/24 Veteriner Kliniğimiz</h3>
+							  <p>Veteriner hekimlerimiz her gün</p>
+							  <p>Can dostlarımız için görev başında</p>
+							  <p>Onların sağlığı bizim önceliğimiz.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+						<div class="d-block services text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="fi fi-rr-hand-holding-heart"></span>
+							</div>
+							<div class="media-body">
+							  <h3 class="heading">❤️ Bağış</h3>
+							  <p>Mama, tedavi ve bakım</p>
+							  <p>için bağış yap,</p>
+							  <p>bir patiye umut ol.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 d-flex align-self-stretch px-4 ftco-animate">
+						<div class="d-block services text-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="fi fi-rr-paw"></span>
+							</div>
+							<div class="media-body">
+							  <h3 class="heading">🐾 Sahiplen</h3>
+							  <p>Can dostlarımızla tanış,</p>
+							  <p>uyumlu dostunu seç ve</p>
+							  <p>ömürlük yuva ol.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb" id="duyurular">
+	<div class="container">
+
+	<div class="heading-section pt-md-4 text-center mb-4">
+		<h2 class="mb-2">📢 Duyurular</h2>
+		<p class="small text-muted">
+		Barınağımıza ait en güncel gelişmeleri buradan takip edebilirsiniz.
+		</p>
+	</div>
+	<ul id="homepageAnnouncements" class="announcement-list"></ul>
+
+
+	<div class="row justify-content-center">
+
+		<div class="col-md-10 col-lg-8">
+
+		<div class="announcement-item d-flex align-items-start" data-toggle="modal" data-target="#announcementModal1">
+			<span class="fa fa-paw icon text-primary"></span>
+			<div class="flex-grow-1">
+			<h6>🐾 Barınağımıza Yeni Can Dostlarımız Geldi</h6>
+			<small>04 Aralık 2025</small>
+			<p>Son iki hafta içinde gelen dostlarımızın sağlık kontrolleri tamamlandı.</p>
+			</div>
+		</div>
+
+		<div class="announcement-item d-flex align-items-start" data-toggle="modal" data-target="#announcementModal2">
+			<span class="fa fa-heart icon text-danger"></span>
+			<div class="flex-grow-1">
+			<h6>🐶 3 Can Dostumuz Sahiplendirildi</h6>
+			<small>03 Aralık 2025</small>
+			<p>Sahiplendirme günümüzde sıcak yuvalarına kavuştular.</p>
+			</div>
+		</div>
+
+		<div class="announcement-item d-flex align-items-start" data-toggle="modal" data-target="#announcementModal3">
+			<span class="fa fa-handshake-o icon text-info"></span>
+			<div class="flex-grow-1">
+			<h6>❤️ Ziyaret Eden Gönüllülerimize Teşekkürler</h6>
+			<small>02 Aralık 2025</small>
+			<p>Ziyaretiniz can dostlarımızın moraline katkı sağladı.</p>
+			</div>
+		</div>
+
+		<div class="announcement-item d-flex align-items-start" data-toggle="modal" data-target="#announcementModal4">
+			<span class="fa fa-search icon text-success"></span>
+			<div class="flex-grow-1">
+			<h6>🔍 Kayıp Boncuk Bulundu</h6>
+			<small>28 Kasım 2025</small>
+			<p>Boncuk sağ salim ailesine kavuştu.</p>
+			</div>
+		</div>
+
+		<div class="announcement-item d-flex align-items-start" data-toggle="modal" data-target="#announcementModal5">
+			<span class="fa fa-gift icon text-warning"></span>
+			<div class="flex-grow-1">
+			<h6>🎁 Yeni Yıl Bağış Gecesi</h6>
+			<small>20 Aralık 2025</small>
+			<p>31 Aralık'ta düzenlenecek gecemize davetlisiniz.</p>
+			</div>
+		</div>
+		<div class="col-12 text-center mt-3">
+				<a href="announcements.html" class="btn btn-success btn-sm px-4">
+					Daha Fazla Duyuru
+				</a>
+		</div>
+		<br>
+
+		</div>
+
+	</div>
+	</div>
+	</section>
+
+
+    
+<section class="ftco-section bg-light ftco-faqs">
+  <div class="container">
+    <div class="row">
+
+      <!-- FOTOĞRAF TARAFI -->
+      <div class="col-lg-6 order-md-last d-flex align-items-center">
+        <div class="faq-img w-100 text-center">
+          <img 
+            src="images/sorusorankopek.webp"
+            alt="TinTin Barınağı"
+            class="img-fluid rounded shadow"
+            style="max-height:450px; object-fit:cover; width:100%;">
+        </div>
+      </div>
+
+      <!-- SSS TARAFI -->
+      <div class="col-lg-6">
+
+        <!-- Başlık -->
+        <div class="heading-section text-left mb-4">
+          <h2 class="mb-3">Sık Sorulan Sorular</h2>
+        </div>
+
+        <!-- Accordion -->
+        <div id="accordion" class="myaccordion w-100">
+
+          <!-- 1 -->
+          <div class="card">
+            <div class="card-header p-0">
+              <h2 class="mb-0">
+                <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        data-parent="#accordion"
+                        aria-expanded="false">
+                  
+                  <p class="mb-0">Bağış nasıl yapabilirim?</p>
+                  <i class="fa"></i>
+
+                </button>
+              </h2>
+            </div>
+
+            <div class="collapse" id="collapseOne">
+              <div class="card-body py-3 px-0">
+                <ul style="list-style:none;">
+                  <li>
+                    Web sitemizdeki <strong>"Bağış Yap"</strong> bölümünden kredi kartı veya banka transferi ile bağış yapabilirsiniz.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="card">
+            <div class="card-header p-0">
+              <h2 class="mb-0">
+                <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        data-parent="#accordion"
+                        aria-expanded="false">
+                  
+                  <p class="mb-0">Bağışların nereye harcandığını görebilir miyim?</p>
+                  <i class="fa"></i>
+
+                </button>
+              </h2>
+            </div>
+
+            <div class="collapse" id="collapseTwo">
+              <div class="card-body py-3 px-0">
+                <ul style="list-style:none;">
+                  <li>
+                    Evet. Tüm bağış harcamaları her ay web sitemizde <strong>şeffaf raporlar</strong> halinde yayınlanır.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="card">
+            <div class="card-header p-0">
+              <h2 class="mb-0">
+                <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        data-parent="#accordion"
+                        aria-expanded="false">
+                  
+                  <p class="mb-0">Gönüllü görev saatlerimi seçebilir miyim?</p>
+                  <i class="fa"></i>
+
+                </button>
+              </h2>
+            </div>
+
+            <div class="collapse" id="collapseThree">
+              <div class="card-body py-3 px-0">
+                <ul style="list-style:none;">
+                  <li>
+                    Evet. Gönüllü olmak isteyen herkes kendi uygunluk durumuna göre görev saatlerini belirleyebilir.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="card">
+            <div class="card-header p-0">
+              <h2 class="mb-0">
+                <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        data-parent="#accordion"
+                        aria-expanded="false">
+                  
+                  <p class="mb-0">Başka şehirden sahiplenebilir miyim?</p>
+                  <i class="fa"></i>
+
+                </button>
+              </h2>
+            </div>
+
+            <div class="collapse" id="collapseFour">
+              <div class="card-body py-3 px-0">
+                <ul style="list-style:none;">
+                  <li>
+                    Evet, şehir dışından sahiplendirme mümkündür. Süreçle ilgili bilgi almak için bizimle iletişime geçebilirsiniz.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="ftco-section testimony-section" style="background-image: url('images/kedikopek.jpg');">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2>Veterinerlerimiz &amp; Gönüllülerimiz</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Aşılama, rutin sağlık kontrolleri ve tedavi planlarının uygulanmasında aktif görev almaktadır.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/kvet1.png)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Dr. Ayşe Yılmaz</p>
+		                    <span class="position">Kıdemli Veteriner</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Operasyon süreçleri, yara bakımları ve ameliyat sonrası takip çalışmalarında görev almaktadır.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/evet1.jpeg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Dr. Mehmet Kaya</p>
+		                    <span class="position">Cerrahi Veteriner</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Sterilizasyon programları, sağlık taramaları ve sahiplendirme kontrollerini yürütmektedir.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/kvet2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Dr. Elif Demir</p>
+		                    <span class="position">Sağlık Koordinatörü</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Günlük muayeneleri yapmakta, hastalık takibi ve ilaç uygulamalarını yürütmektedir.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/evet2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Dr. Can Özkan</p>
+		                    <span class="position">Klinik Veteriner</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+			    <div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Acil vakalara hızlı müdahale ve saha destek hizmetlerini yürütmektedir.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/evet3.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Dr. Burak Çetin</p>
+									<span class="position">Acil Müdahale Veterinerir</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Hastalık önleme çalışmaları, aşılama planları ve sağlık taramaları yapmaktadır.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/kvet3.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Dr. Duygu Acar</p>
+									<span class="position">Koruyucu Hekim</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Rehabilitasyon süreçlerini yönetmekte ve hayvanların iyileşme süreçlerini takip etmektedir.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/kvet4.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Dr. Selin Arslan</p>
+									<span class="position">Rehabilitasyon Veterineri</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Hayvanların günlük temizliği, beslenmesi ve yaşam alanlarının düzeniyle ilgilenmektedir.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/pricing-3.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Zeynep Aksoy</p>
+									<span class="position">Bakım Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Mama temini, bağış ürünlerinin dağıtımı ve depo düzenini sağlamaktadır.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/staff-2.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Emre Çelik</p>
+									<span class="position">Lojistik Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Sahiplendirme süreçlerinde aktif rol almakta ve hayvanların yeni yuvalarına kavuşmasını sağlamaktadır.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/staff-6.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Derya Korkmaz</p>
+									<span class="position">Sahiplendirme Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Sosyal destek sağlamakta ve topluluk içinde farkındalık yaratmaktadır.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/staff-3.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Ali Karaman</p>
+									<span class="position">Sosyal Destek Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Tanıtım faaliyetlerinde bulunmakta ve projelerin görünürlüğünü artırmaktadır.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/about-2.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Melis Turan</p>
+									<span class="position">Tanıtım Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>				
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Bakım destek faaliyetlerinde bulunmakta ve hayvanların sağlıklı yaşamlarını desteklemektedir.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/staff-5.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Mert Yıldırım</p>
+									<span class="position">Bakım Destek Gönüllüsü</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>			
+				<div class="item">
+					<div class="testimony-wrap py-4">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+						<div class="text">
+							<p class="mb-4">Yeni gönüllülerin bilgilendirme ve yönlendirme süreçlerini yürütmektedir.</p>
+							<div class="d-flex align-items-center">
+								<div class="user-img" style="background-image: url(images/img.jpg)"></div>
+								<div class="pl-3">
+									<p class="name">Ebru Koç</p>
+									<span class="position">Gönüllü Eğitmen</span>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Bağış kampanyaları ve farkındalık etkinliklerinde aktif görev almaktadır.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/staff-1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Kerem Aydın</p>
+		                    <span class="position">Etkinlik Gönüllüsü</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="ftco-section bg-light" id="stats-section">
+  <div class="container">
+
+    <!-- BAŞLIK -->
+    <div class="text-center mb-5 stats-title">
+      <h2 class="font-weight-bold">
+        📊 Sayılarla TinTin Barınağı
+      </h2>
+      <p class="text-muted">
+        Gönüllülerimiz ve destekçilerimizin katkılarıyla büyüyen istatistiklerimiz
+      </p>
+    </div>
+
+    <!-- GRAFİK KARTLARI -->
+    <div class="row">
+
+      <!-- Sahiplendirme -->
+      <div class="col-lg-6 mb-4">
+        <div class="chart-box shadow-sm">
+          <h5 class="text-center mb-3">
+            🐾 Yıllara Göre Sahiplendirme
+          </h5>
+          <canvas id="adoptionChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Destek -->
+      <div class="col-lg-6 mb-4">
+        <div class="chart-box shadow-sm">
+          <h5 class="text-center mb-3">
+            🤝 Destek Dağılımı
+          </h5>
+          <canvas id="supportChart"></canvas>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</section>
+<section class="ftco-counter" id="section-counter">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sahiplendirme -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center">
+          <div class="text">
+            <strong class="number" data-number="410">0</strong>
+          </div>
+          <div class="text">
+            <span>Sahiplendirilen Can Dostu</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gönüllü -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center">
+          <div class="text">
+            <strong class="number" data-number="15">0</strong>
+          </div>
+          <div class="text">
+            <span>Aktif Gönüllü Sayısı</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bağış -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center">
+          <div class="text">
+            <strong class="number" data-number="96000">0</strong>
+          </div>
+          <div class="text">
+            <span>Toplam Bağış Tutarı (TL)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barınaktaki Hayvan -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center">
+          <div class="text">
+            <strong class="number" data-number="76">0</strong>
+          </div>
+          <div class="text">
+            <span>Barınaktaki Can Dostu</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      
+      <!-- LOGO + AÇIKLAMA -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">TinTin Barınağı</h2>
+        <p>
+          Can dostlarımız için güvenli bir yaşam alanı oluşturuyor,
+          sahiplendirme, gönüllülük ve bağışlarla onların hayatına dokunuyoruz.
+        </p>
+
+        <ul class="ftco-footer-social p-0">
+          <li class="ftco-animate">
+            <a href="https://x.com/?lang=tr" target="_blank" title="X">
+              <span class="fa fa-twitter"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Facebook">
+              <span class="fa fa-facebook"></span>
+            </a>
+          </li>
+          <li class="ftco-animate">
+            <a href="#" target="_blank" title="Instagram">
+              <span class="fa fa-instagram"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- HIZLI MENÜ -->
+      <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+        <h2 class="footer-heading">Hızlı Menü</h2>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="py-2 d-block">Anasayfa</a></li>
+          <li><a href="about.html" class="py-2 d-block">Hakkımızda</a></li>
+          <li><a href="tintinbarinak.html" class="py-2 d-block">Barınak</a></li>
+          <li><a href="adopt.html" class="py-2 d-block">Sahiplen</a></li>
+          <li><a href="gonulluol.html" class="py-2 d-block">Gönüllü Ol</a></li>
+          <li><a href="pricing.html" class="py-2 d-block">Bağış</a></li>
+          <li><a href="contact.html" class="py-2 d-block">İletişim</a></li>
+        </ul>
+      </div>
+
+
+      <!-- İLETİŞİM -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+        <h2 class="footer-heading">İletişim</h2>
+        <div class="block-23 mb-3">
+          <ul>
+            <li>
+              <span class="icon fa fa-map"></span>
+              <span class="text">Kocaeli, Türkiye</span>
+            </li>
+
+            <li>
+              <a href="tel:+905550000000">
+                <span class="icon fa fa-phone"></span>
+                <span class="text">+90 555 000 00 00</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:info@tintinbarinagi.com">
+                <span class="icon fa fa-paper-plane"></span>
+                <span class="text">info@tintinbarinagi.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- ALT BANT -->
+    
+  </div>
+</footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+	<script src="js/shop.js"></script>
+	<script src="js/main.js"></script>
+	<!-- ========== MODAL 1 ========= -->
+<div class="modal fade" id="announcementModal1" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5>🐾 Barınağımıza Yeni Can Dostlarımız Geldi</h5>
+<button class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p>Son 2 hafta boyunca barınağımıza gelen tüm can dostlarımızın sağlık kontrolleri başarıyla tamamlandı.</p>
+
+<h6>📎 Ek Dosyalar</h6>
+<ul>
+<li><a href="#">📄 Saglik_Raporlari.pdf</a></li>
+<li><a href="#">📑 Sahiplendirme_Formu.docx</a></li>
+<li><a href="#">🖼 Yeni_Dostlar.jpg</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ========== MODAL 2 ========= -->
+<div class="modal fade" id="announcementModal2" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5>🐶 Sahiplendirme Mutluluğu</h5>
+<button class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p>Etkinliğimizde 3 can dostumuz sıcak yuvalarına kavuştu.</p>
+
+<ul>
+<li><a href="#">📄 Sahiplendirme_Listesi.pdf</a></li>
+<li><a href="#">🖼 Mutlu_Yuvalar.jpg</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ========== MODAL 3 ========= -->
+<div class="modal fade" id="announcementModal3" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5>❤️ Gönüllü Teşekkürü</h5>
+<button class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p>Barınağımızı ziyaret ederek can dostlarımızla vakit geçiren tüm gönüllülerimize teşekkür ederiz.</p>
+
+<ul>
+<li><a href="#">🖼 Ziyaret_Galeri.jpg</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ========== MODAL 4 ========= -->
+<div class="modal fade" id="announcementModal4" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5>🔍 Kayıp Boncuk Bulundu</h5>
+<button class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p>Kayıp ilanı yayınlanan Boncuk isimli dostumuz bulunarak sahibine teslim edildi.</p>
+
+<ul>
+<li><a href="#">📄 Buluntu_Raporu.pdf</a></li>
+<li><a href="#">🖼 Boncuk_Guncel.jpg</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- ========== MODAL 5 ========= -->
+<div class="modal fade" id="announcementModal5" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5>🎁 Yeni Yıl Bağış Gecesi</h5>
+<button class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p>31 Aralık gecesi bağış gecemizde buluşuyoruz.</p>
+
+<ul>
+<li><a href="#">📄 Etkinlik_Programi.pdf</a></li>
+<li><a href="#">🖼 Afiş.jpg</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const commonOptions = {
+  responsive: true,
+  animation: {
+    duration: 1200,
+    easing: 'easeOutQuart'
+  },
+  plugins:{
+    legend:{ labels:{ font:{ size:14 }}}
+  }
+}
+
+
+new Chart(adoptionChart, {
+  type: 'bar',
+  data: {
+    labels: ['2021','2022','2023','2024','2025'],
+    datasets: [{
+      label: 'Sahiplendirilen Hayvan',
+      data: [120,180,240,320,410],
+      backgroundColor:'#28a745'
+    }]
+  },
+  options: commonOptions
+});
+
+
+new Chart(supportChart, {
+  type: 'doughnut',
+  data: {
+    labels: ['Gönüllü', 'Bağışçı', 'Sponsor'],
+    datasets:[{
+      data:[180,260,80],
+      backgroundColor:['#17a2b8','#28a745','#ffc107']
+    }]
+  },
+  options: commonOptions
+});
+
+
+new Chart(donationChart, {
+  type: 'line',
+  data: {
+    labels: ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran'],
+    datasets:[{
+      label:'Bağış (TL)',
+      data:[22000,28000,35000,42000,39000,48000],
+      borderColor:'#28a745',
+      backgroundColor:'rgba(40,167,69,.15)',
+      fill:true,
+      tension:.4
+    }]
+  },
+  options: commonOptions
+});
+
+</script>
+<script src="js/homepage.js"></script>
+
+
+    
+  </body>
+</html>

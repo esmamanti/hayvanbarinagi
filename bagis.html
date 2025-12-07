@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pet Sitting - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+     <div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +9055 555 55 55</a> 
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> kou@email.com</a>
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+					<a class="navbar-brand" href="index.html"><span class="flaticon-pawprint-1 mr-2"></span>TinTin Barınağı</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a href="index.html" class="nav-link">ANASAYFA</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">HAKKIMIZDA</a></li>
+					<li class="nav-item"><a href="tintinbarinak.html" class="nav-link">BARINAK</a></li>
+					<li class="nav-item dropdown">
+						<a href="sahiplen.html" 
+							class="nav-link dropdown-toggle"
+							id="adoptDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							SAHİPLEN
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="adoptDropdown">
+							<a class="dropdown-item" href="adopt-cats.html">Kedilerimiz</a>
+							<a class="dropdown-item" href="adopt-dogs.html">Köpeklerimiz</a>
+						</div>
+						</li>
+
+
+						<li class="nav-item dropdown">
+						<a href="#" 
+							class="nav-link dropdown-toggle"
+							id="volunteerDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							Gönüllülük
+						</a>
+
+						<div class="dropdown-menu" aria-labelledby="volunteerDropdown">
+							<a class="dropdown-item" href="volunteer-feeding.html">Besleme Ekibi</a>
+							<a class="dropdown-item" href="volunteer-care.html">Bakım & Temizlik Ekibi</a>
+							<a class="dropdown-item" href="volunteer-vet.html">Veteriner Destek Ekibi</a>
+						</div>
+						</li>
+
+
+					<li class="nav-item active"><a href="bagis.html" class="nav-link">BAĞIŞ</a></li>
+
+					<li class="nav-item"><a href="contact.html" class="nav-link">İLETİŞİM</a></li>
+					<li class="nav-item"><a href="#" id="cartButton" class="nav-link nav-icon" onclick="showCartModal(); return false;"><span class="fa fa-shopping-cart"></span><span class="nav-badge" id="cartCount">0</span></a></li>
+					<li class="nav-item"><a href="#" id="userButton" class="nav-link nav-icon" onclick="openLoginModal(); return false;"><span class="fa fa-user"></span></a></li>
+								</ul>
+				</div>
+			</div>
+		</nav>
+
+	<!-- Cart Modal -->
+	<div class="adopt-form" id="cartModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeCartModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+			<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+				<thead>
+					<tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+				</thead>
+				<tbody id="cartItems"></tbody>
+			</table>
+			<button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+		</div>
+	</div>
+
+	<!-- Login Modal -->
+	<div class="adopt-form" id="loginModal">
+		<div class="form-content">
+			<button class="form-close" onclick="closeLoginModal()">&times;</button>
+			<h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+			<form id="loginForm">
+				<div class="form-group">
+					<label for="loginEmail">Email</label>
+					<input id="loginEmail" type="email" required>
+				</div>
+				<div class="form-group">
+					<label for="loginPassword">Şifre</label>
+					<input id="loginPassword" type="password" required>
+				</div>
+				<button type="submit" class="submit-btn">Giriş</button>
+			</form>
+		</div>
+	</div>
+
+   <section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center pb-5 mb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2>Bağış Seçenekleri</h2>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- KURU MAMA -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/kurumama.png);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Kuru Mama</span>
+            <span class="price"><sup>₺</sup> <span class="number">500</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Yavru kedi / köpek maması</li>
+              <li>Yetişkin mama</li>
+              <li>Düşük tahıllı / hassas mide mamaları</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'kuru-mama', name:'Kuru Mama Bağışı', price:500, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- YAŞ MAMA -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/yasmama.jpg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Yaş Mama</span>
+            <span class="price"><sup>₺</sup> <span class="number">750</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Konserve mamalar</li>
+              <li>Hasta hayvan desteği</li>
+              <li>İştahsız hayvan mamaları</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'yas-mama', name:'Yaş Mama Bağışı', price:750, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIBBI MALZEME -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/pansuman.jpg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Tıbbi Malzeme</span>
+            <span class="price"><sup>₺</sup> <span class="number">800</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Vitamin & takviye</li>
+              <li>Pansuman seti</li>
+              <li>Eldiven ve antiseptik</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'tibbi-malzeme', name:'Tıbbi Malzeme Bağışı', price:800, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AŞI -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/asi.jpg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Aşı & Tedavi</span>
+            <span class="price"><sup>₺</sup> <span class="number">2000</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Parazit aşıları</li>
+              <li>Kısırlaştırma katkısı</li>
+              <li>Ameliyat desteği</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'asi-tedavi', name:'Aşı & Tedavi Bağışı', price:2000, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BARINMA -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/barinma.jpg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Barınma & Bakım</span>
+            <span class="price"><sup>₺</sup> <span class="number">5000</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Battaniye</li>
+              <li>Havlu</li>
+              <li>Minder</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'barinma', name:'Barınma & Bakım Bağışı', price:5000, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HİJYEN -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/hijyen.jpg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Hijyen & Temizlik</span>
+            <span class="price"><sup>₺</sup> <span class="number">250</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Zemin temizlik ürünleri</li>
+              <li>Eldiven & maske</li>
+              <li>Kağıt havlu</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'hijyen', name:'Hijyen & Temizlik Bağışı', price:250, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OYUNCAK -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/oyuncak.jpeg);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Oyuncak & Sosyalleşme</span>
+            <span class="price"><sup>₺</sup> <span class="number">1500</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Top</li>
+              <li>Tasma ekipmanları</li>
+              <li>Eğitim oyuncakları</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'oyuncak', name:'Oyuncak & Sosyalleşme Bağışı', price:1500, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOJİSTİK -->
+      <div class="col-md-4 ftco-animate">
+        <div class="block-7">
+          <div class="img" style="background-image: url(images/ulasim.webp);"></div>
+          <div class="text-center p-4">
+            <span class="excerpt d-block">Ulaşım & Lojistik</span>
+            <span class="price"><sup>₺</sup> <span class="number">2500</span></span>
+
+            <ul class="pricing-text mb-5">
+              <li>Mama taşıma</li>
+              <li>Veteriner ulaşımı</li>
+              <li>Kurtarma destekleri</li>
+            </ul>
+
+            <a href="javascript:void(0)"
+               class="btn btn-primary d-block px-2 py-3"
+               onclick="addToCart({ id:'ulasim', name:'Ulaşım & Lojistik Bağışı', price:2500, qty:1 })">
+              Bağışla
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+			
+			<!-- LOGO + AÇIKLAMA -->
+			<div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+				<h2 class="footer-heading">TinTin Barınağı</h2>
+				<p>
+				Can dostlarımız için güvenli bir yaşam alanı oluşturuyor,
+				sahiplendirme, gönüllülük ve bağışlarla onların hayatına dokunuyoruz.
+				</p>
+
+				<ul class="ftco-footer-social p-0">
+				<li class="ftco-animate">
+					<a href="https://x.com/?lang=tr" target="_blank" title="X">
+					<span class="fa fa-twitter"></span>
+					</a>
+				</li>
+				<li class="ftco-animate">
+					<a href="#" target="_blank" title="Facebook">
+					<span class="fa fa-facebook"></span>
+					</a>
+				</li>
+				<li class="ftco-animate">
+					<a href="#" target="_blank" title="Instagram">
+					<span class="fa fa-instagram"></span>
+					</a>
+				</li>
+				</ul>
+			</div>
+
+
+			<!-- HIZLI MENÜ -->
+			<div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+				<h2 class="footer-heading">Hızlı Menü</h2>
+				<ul class="list-unstyled">
+				<li><a href="index.html" class="py-2 d-block">Anasayfa</a></li>
+				<li><a href="about.html" class="py-2 d-block">Hakkımızda</a></li>
+				<li><a href="tintinbarinak.html" class="py-2 d-block">Barınak</a></li>
+				<li><a href="adopt.html" class="py-2 d-block">Sahiplen</a></li>
+				<li><a href="gonulluol.html" class="py-2 d-block">Gönüllü Ol</a></li>
+				<li><a href="pricing.html" class="py-2 d-block">Bağış</a></li>
+				<li><a href="contact.html" class="py-2 d-block">İletişim</a></li>
+				</ul>
+			</div>
+
+
+			<!-- İLETİŞİM -->
+			<div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+				<h2 class="footer-heading">İletişim</h2>
+				<div class="block-23 mb-3">
+				<ul>
+					<li>
+					<span class="icon fa fa-map"></span>
+					<span class="text">Kocaeli, Türkiye</span>
+					</li>
+
+					<li>
+					<a href="tel:+905550000000">
+						<span class="icon fa fa-phone"></span>
+						<span class="text">+90 555 000 00 00</span>
+					</a>
+					</li>
+
+					<li>
+					<a href="mailto:info@tintinbarinagi.com">
+						<span class="icon fa fa-paper-plane"></span>
+						<span class="text">info@tintinbarinagi.com</span>
+					</a>
+					</li>
+				</ul>
+				</div>
+			</div>
+
+			</div>
+			
+		</div>
+	</footer>
+
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Cart & Login modals -->
+  <div class="adopt-form" id="cartModal">
+	  <div class="form-content">
+		  <button class="form-close" onclick="closeCartModal()">&times;</button>
+		  <h2 style="margin-bottom: 20px; text-align: center; color: #333;">Sepet</h2>
+		  <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+			  <thead>
+				  <tr><th>Ürün</th><th>Adet</th><th>Fiyat</th><th></th></tr>
+			  </thead>
+			  <tbody id="cartItems"></tbody>
+		  </table>
+		  <button class="submit-btn" onclick="checkoutCart()">Sepeti Tamamla</button>
+	  </div>
+  </div>
+
+  <div class="adopt-form" id="loginModal">
+	  <div class="form-content">
+		  <button class="form-close" onclick="closeLoginModal()">&times;</button>
+		  <h2 style="margin-bottom: 20px; text-align: center; color: #333;">Giriş Yap</h2>
+		  <form id="loginForm">
+			  <div class="form-group">
+				  <label for="loginEmail">Email</label>
+				  <input id="loginEmail" type="email" required>
+			  </div>
+			  <div class="form-group">
+				  <label for="loginPassword">Şifre</label>
+				  <input id="loginPassword" type="password" required>
+			  </div>
+			  <button type="submit" class="submit-btn">Giriş</button>
+		  </form>
+	  </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+	<script src="js/shop.js"></script>
+	<script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+
+<div id="donationArea"></div>
+
+<script>
+
+loadDonations().forEach(d => {
+
+ donationArea.innerHTML += `
+ <div class="block-7">
+   <div class="text-center p-4">
+     <span class="excerpt">${d.name}</span>
+     <span class="price">${d.price} ₺</span>
+     <p>${d.desc}</p>
+
+     <a class="btn btn-primary"
+     onclick="addToCart({
+       id:'${d.name}',
+       name:'${d.name}',
+       price:${d.price},
+       qty:1
+     })">
+     Bağışla</a>
+
+   </div>
+ </div>
+ `
+
+})
+
+</script>
+<script>
+
+function donate(type, amount){
+
+    const donations = JSON.parse(localStorage.getItem("donations")) || [];
+
+    donations.push({
+        type:type,
+        amount:amount,
+        date:new Date().toLocaleString()
+    });
+
+    localStorage.setItem("donations", JSON.stringify(donations));
+
+    alert(type + " bağışı alınmıştır! 💚");
+}
+
+</script>
+
+
+
+
+    
+  </body>
+</html>
